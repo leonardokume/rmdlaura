@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"$if(lang)$ lang="$lang$" xml:lang="$lang$"$endif$>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="pandoc" />
+
+    $for(author-meta)$
+    <meta name="author" content="$author-meta$" />
+    $endfor$
+
+    $if(date-meta)$
+    <meta name="date" content="$date-meta$" />
+    $endif$
+
+    <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
+
+    $for(header-includes)$
+    $header-includes$
+    $endfor$
+
+    $if(highlightjs)$
+    <style type="text/css">code{white-space: pre;}</style>
+    <link rel="stylesheet"
+	  href="$highlightjs$/$if(highlightjs-theme)$$highlightjs-theme$$else$default$endif$.css"
+	  $if(html5)$$else$type="text/css" $endif$/>
+    <script src="$highlightjs$/highlight.js"></script>
+    <script type="text/javascript">
+      if (window.hljs && document.readyState && document.readyState === "complete") {
+	  window.setTimeout(function() {
+	      hljs.initHighlighting();
+	  }, 0);
+      }
+    </script>
+    $endif$
+
+    $if(highlighting-css)$
+    <style type="text/css">code{white-space: pre;}</style>
+    <style type="text/css">
+      $highlighting-css$
+    </style>
+    $endif$
+
+    $for(css)$
+    <link rel="stylesheet" href="$css$" $if(html5)$$else$type="text/css" $endif$/>
+    $endfor$
+
+    <!-- tabsets -->
+    <script>
+      $$(document).ready(function () {
+	  window.buildTabsets("toc");
+      });
+      $$(document).ready(function () {
+	  $$('.tabset-dropdown > .nav-tabs > li').click(function () {
+	      $$(this).parent().toggleClass('nav-tabs-open')
+	  });
+      });
+    </script>
+
+    <!-- code folding -->
+    $if(code_menu)$
+    <script>
+      $$(document).ready(function () {
+	  $if(source_embed)$
+	  window.initializeSourceEmbed("$source_embed$");
+	  $endif$
+	  $if(code_folding)$
+	  window.initializeCodeFolding("$code_folding$" === "show");
+	  $endif$
+      });
+    </script>
+    $endif$
+
+    <!-- code download -->
+    $if(source_embed)$
+    <style>
+      #rmd-source-code {
+	  display: none;
+      }
+    </style>
+    $endif$
+
+    <!-- tabsets dropdown -->
+
+    <style type="text/css">
+      .tabset-dropdown > .nav-tabs {
+	  display: inline-table;
+	  max-height: 500px;
+	  min-height: 44px;
+	  overflow-y: auto;
+	  background: white;
+	  border: 1px solid #ddd;
+	  border-radius: 4px;
+      }
+
+      .tabset-dropdown > .nav-tabs > li.active:before {
+	  content: "";
+	  font-family: 'Glyphicons Halflings';
+	  display: inline-block;
+	  padding: 10px;
+	  border-right: 1px solid #ddd;
+      }
+
+      .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+	  content: "&#xe258;";
+	  border: none;
+      }
+
+      .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+	  content: "";
+	  font-family: 'Glyphicons Halflings';
+	  display: inline-block;
+	  padding: 10px;
+	  border-right: 1px solid #ddd;
+      }
+
+      .tabset-dropdown > .nav-tabs > li.active {
+	  display: block;
+      }
+
+      .tabset-dropdown > .nav-tabs > li.active a {
+  	  padding: 0 15px !important;
+      }
+
+      .tabset-dropdown > .nav-tabs > li > a,
+      .tabset-dropdown > .nav-tabs > li > a:focus,
+      .tabset-dropdown > .nav-tabs > li > a:hover {
+	  border: none;
+	  display: inline-block;
+	  border-radius: 4px;
+	  background-color: transparent;
+      }
+
+      .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+	  display: block;
+	  float: none;
+      }
+
+      .tabset-dropdown > .nav-tabs > li {
+	  display: none;
+	  margin-left: 0 !important;
+      }
+    </style>
+
+</head>
+
+<body class="preload">
+   $if(robobook)$
+   <!-- robobook start -->
+   <div class="book with-summary">
+      <div class="book-summary">
+        <ul>
+          <img class="logo"></img>
+          <li class="divider"></li>
+        </ul>
+        <nav role="navigation" id="toc">
+          $toc$
+        </nav>
+        <ul class="authors">
+          <li class="divider"></li>
+          $for(author)$
+          $if(author.name)$
+            <li><span><i class="glyphicon glyphicon-user"></i> $author.name$
+	          $if(author.affiliation)$
+              <br />$author.affiliation$
+            $endif$
+	          $if(author.email)$
+	            <br />$author.email$<
+	          $endif$
+            </span></li>
+          $else$
+            <li><span><i class="glyphicon glyphicon-user"></i> $author$</span></li>
+          $endif$
+          $endfor$
+          $if(date)$
+           <li><span><i class="glyphicon glyphicon-calendar"></i> $date$</span></li>
+          $endif$
+        </ul>
+      </div>
+      <div class="book-body fixed">
+        <div class="body-inner">
+            <a class="btn pull-left js-toolbar-action toggle-sidebar" aria-label="Toggle Sidebar" title="Toggle Sidebar" href="#">
+              <span class="glyphicon glyphicon-menu-hamburger"></span>
+            </a>
+            <div class="page-inner">
+              <section id="content" class="normal">
+   $endif$
+
+   $if(code_menu)$
+   <div class="btn-group pull-right">
+     <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+     <ul class="dropdown-menu" style="min-width: 50px;">
+	    $if(code_folding)$
+	    <li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+	    <li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+	    $if(source_embed)$
+	    <li role="separator" class="divider"></li>
+	    $endif$
+	    $endif$
+	    $if(source_embed)$
+	    <li><a id="rmd-download-source" href="#">Download Rmd</a></li>
+	    $endif$
+     </ul>
+   </div>
+   $endif$
+
+   $for(include-before)$
+   $include-before$
+   $endfor$
+
+   $if(title)$
+   <h1 class="title">$title$</h1>
+   $endif$
+   $if(subtitle)$
+   <h1 class="subtitle">$subtitle$</h1>
+   $endif$
+
+
+<!-- Don't indent these lines or it will mess pre blocks indentation -->
+
+$if(robobook)$
+$body$
+$endif$
+
+   $for(include-after)$
+   $include-after$
+   $endfor$
+
+
+   $if(robobook)$
+  </section>
+  </div>
+  </div>
+  </div>
+  </div>
+   $endif$
+
+
+
+  <script>
+    $$(document).ready(function () {
+
+
+ 	$if(thumbnails)$
+ 	$$('#content img').addClass("image-thumb");
+	$endif$
+
+	$if(lightbox)$
+	$$('#content img').addClass("image-lb");
+	$$('#content').magnificPopup({
+	    type:'image',
+	    closeOnContentClick: false,
+	    closeBtnInside: false,
+	    delegate: '.image-lb',
+	    gallery: {enabled: $gallery$ },
+	    image: {
+	        verticalFit: true,
+		titleSrc: 'alt'
+	    }
+ 	});
+ 	$endif$
+    });
+  </script>
+
+
+
+  $if(mathjax-url)$
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+	var script = document.createElement("script");
+	script.type = "text/javascript";
+	script.src  = "$mathjax-url$";
+	document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+  $endif$
+
+</body>
+</html>
