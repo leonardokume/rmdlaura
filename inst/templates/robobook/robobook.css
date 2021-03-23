@@ -50,6 +50,12 @@ legend {
     text-transform: uppercase;
     font-weight: 700;
 }
+
+.divider-title {
+  align-items: center;
+  border-top: 3px solid #ff8900;
+  border-radius: 5px;
+}
 /******************************************************************************/
 
 
@@ -1161,6 +1167,8 @@ body {
     font-size: 1.5em;
     font-weight: 400;
     margin-top: -15px;
+    font-weight: 500;
+    color: #333333;
 }
 
 

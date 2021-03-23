@@ -1,15 +1,15 @@
 Package: rmdlaura
 Maintainer: Leonardo Kume <leonardo.kume@laura-br.com>
 Authors@R: c(person("Julien", "Barnier", email="julien.barnier@cnrs.fr",
-    role=c("aut","cre"))
-    person("Leonardo", "Kume", email="leonardo.kume@laura-br.com))
+    role=c("cre", "aut")),
+    person("Leonardo", "Kume", email="leonardo.kume@laura-br.com",
+    role=c("aut")))
 Version: 1.0.0
 Date: 2021-03-23
 License: GPL (>= 2)
 Encoding: UTF-8
 Title: Template para gerar relatórios do Robô Laura em Rmarkdown 
-Description: Template para gerar relatórios do Robô Laura em Rmarkdown.
-Baseado no tema "robobook" do pacote "rmdformats", desenvolvido por Julien Barnier.
+Description: Template para gerar relatórios do Robô Laura em Rmarkdown. Baseado no tema "robobook" do pacote "rmdformats", desenvolvido por Julien Barnier.
 Imports: 
     knitr,
     rmarkdown,
