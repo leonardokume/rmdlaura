@@ -1,0 +1,132 @@
+---
+title: "EXEMPLO DE RELATÓRIO"
+subtitle: "GERADO PELO PACOTE RMDLAURA"
+date: "`r format(Sys.time(), '%d de %B, %Y')`"
+author: ""
+output:
+  rmdlaura::robobook:
+    highlight: kate
+    code_folding: hide
+---
+
+
+```{r setup, include=FALSE}
+library(knitr)
+library(rmdformats)
+library(plotly)
+library(ggplot2)
+library(kableExtra)
+
+## Global options
+options(max.print="75")
+opts_chunk$set(echo=FALSE,
+	             cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE)
+opts_knit$set(width=75)
+```
+
+# Introdução
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+```{R, echo=T}
+x <- c('Feature A', 'Feature B', 'Feature C', 'Feature D', 'Feature E')
+y <- c(20, 14, 23, 25, 22)
+data <- data.frame(x, y)
+
+fig <- plot_ly(data, x = ~x, y = ~y, type = 'bar',
+        marker = list(color = c('rgba(204,204,204,1)', 'rgba(222,45,38,0.8)',
+                                'rgba(204,204,204,1)', 'rgba(204,204,204,1)',
+                                'rgba(204,204,204,1)'))) %>%
+  config(displayModeBar = FALSE)
+  
+fig <- fig %>% layout(title = "Least Used Features",
+         xaxis = list(title = ""),
+         yaxis = list(title = ""))
+
+fig
+```
+
+## Exemplos de Avisos
+
+::: admonition-warning
+::: admonition-title
+**Warning**
+:::
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+:::
+
+::: admonition-note
+::: admonition-title
+**Note**
+:::
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+:::
+
+::: admonition-tip
+::: admonition-title
+**Tip**
+:::
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+:::
+
+::: admonition-green
+::: admonition-title
+**Green**
+:::
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+:::
+
+### Terceiro nível
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ultricies, velit id mattis sagittis, orci tortor molestie turpis, ac auctor felis mi sit amet sapien. Fusce tincidunt tellus at neque ultrices fringilla. Aenean at odio at turpis commodo pharetra. Praesent congue erat efficitur ornare rutrum. Curabitur orci nisi, maximus et arcu id, consequat maximus nunc. Nam sit amet elit egestas, posuere velit vel, pulvinar quam. Curabitur justo ante, dignissim ut massa a, aliquet elementum enim. Curabitur malesuada consectetur sapien, quis molestie lacus hendrerit vitae. Sed rutrum enim est, ac condimentum odio dictum in. Nam interdum ante placerat eros ultricies congue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+```{R echo=TRUE}
+kbl(mtcars[1:5]) %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+```
+
+Nunc laoreet vulputate enim. In turpis libero, vehicula vel purus elementum, rhoncus gravida erat. Integer euismod libero vitae mi tincidunt cursus. Mauris id mauris eu sem mollis malesuada et id ante. Fusce quis mauris ut nunc tincidunt blandit. Sed tempor pellentesque magna eget placerat. In malesuada commodo nisl ac accumsan. Donec eget lectus at nisl aliquet blandit non in mi. Mauris in tellus non augue ultrices vulputate. Donec ullamcorper dolor id nulla interdum, et dictum nunc pretium. Nullam egestas auctor sem at lacinia. Praesent nibh libero, vehicula in tempor sed, mollis at enim.
+
+# Segundo Capítulo
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In placerat velit lectus, ut scelerisque diam aliquet hendrerit. Cras justo sapien, interdum quis turpis ut, efficitur dictum purus. Cras tristique felis elit, vel mattis turpis finibus quis. In vitae magna dolor. Curabitur pharetra metus tortor, sed dictum velit sagittis vel. Nullam elementum quis arcu a fringilla. Curabitur dapibus id nisl ut vehicula. Integer non blandit tortor, id hendrerit diam. Cras et sagittis ligula, ac ultrices arcu. In justo sem, gravida quis lectus non, maximus ornare massa. Integer ac malesuada nibh, quis dignissim dui. Quisque eget dapibus turpis. Quisque euismod suscipit diam, eget iaculis urna venenatis ac. Vivamus dapibus, arcu quis egestas pellentesque, nibh nulla sodales tellus, non ornare libero lorem vel velit.
+
+WOE é calculado pela expressão abaixo:
+$$WOE = \log \displaystyle{\left( \frac{Dist_{Rel}.Óbito_i}{Dist_{Rel}.Alta_i} \right) }$$
+
+$Dist_{Rel}.Óbito_i =$ Frequência relativa de óbito.
+
+$Dist_{Rel}.Alta_i =$ Frequência relativa de alta.
+
+Valor WoE  positivo, significa que a distribuição de óbito é maior que a  distribuição de alta.
+
+Valor WoE  negativo, significa que a distribuição de óbito é menor que a distribuição de alta.
+
+Integer mi nunc, posuere pellentesque dolor nec, mollis maximus dolor. Vestibulum commodo, dui a varius dapibus, diam risus pharetra mauris, a pharetra orci ante aliquam leo. Vivamus condimentum tincidunt elit, id feugiat diam ullamcorper eget. Fusce varius augue eu est pretium lobortis. Fusce volutpat posuere pulvinar. Morbi at tellus fringilla odio vestibulum pharetra. Quisque turpis metus, ultrices id iaculis sed, elementum nec arcu. Duis vitae dolor non nibh imperdiet malesuada. Donec at maximus ipsum. Aliquam tempus est ut augue molestie pulvinar. 
+
+## Conclusão
+
+ Nulla venenatis dapibus ex, sed laoreet ligula luctus nec. Nunc mollis sed velit a tempor. Sed pretium lacus nec congue porta. In tristique ornare sem. Aliquam sapien massa, rhoncus vitae porta eu, eleifend quis purus. Sed id urna pharetra, tristique arcu sed, dignissim nunc. Sed fringilla finibus ipsum, a mattis nulla sodales eget.
+ 
+```{r, echo = T}
+ # create factors with value labels
+mtcars$gear <- factor(mtcars$gear,levels=c(3,4,5),
+   labels=c("3gears","4gears","5gears"))
+mtcars$am <- factor(mtcars$am,levels=c(0,1),
+   labels=c("Automatic","Manual"))
+mtcars$cyl <- factor(mtcars$cyl,levels=c(4,6,8),
+   labels=c("4cyl","6cyl","8cyl"))
+
+# Kernel density plots for mpg
+# grouped by number of gears (indicated by color)
+qplot(mpg, data=mtcars, geom="density", fill=gear, alpha=I(.5),
+   main="Distribution of Gas Milage", xlab="Miles Per Gallon",
+   ylab="Density")
+```
+
+Mauris sed molestie eros. Sed sit amet egestas leo. Quisque rutrum aliquet turpis, at malesuada urna condimentum in. Aliquam sagittis, nunc et faucibus ornare, est ex tincidunt felis, fringilla vestibulum ipsum odio eget libero. Morbi commodo et massa id aliquet. Vestibulum tincidunt malesuada augue non malesuada. Vivamus enim odio, posuere at malesuada in, posuere non est. Nulla placerat cursus ex vehicula interdum. Nullam facilisis urna dolor, vitae fermentum leo aliquet nec. Sed lacus quam, vulputate quis ligula non, bibendum tempor neque. Vivamus tempus, enim non scelerisque volutpat, turpis erat maximus urna, in cursus eros enim in ex. 
