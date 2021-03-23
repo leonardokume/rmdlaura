@@ -1,5 +1,5 @@
 # rmdlaura
-Template para gerar relatórios do Robô Laura em Rmarkdown, baseado no template *robobook* do pacote *rmdformats*
+Template para gerar relatórios do Robô Laura em Rmarkdown, baseado no estilo *robobook* do pacote [*rmdformats*](https://github.com/juba/rmdformats)
 
 ## Exemplo
 

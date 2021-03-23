@@ -56,6 +56,15 @@ legend {
   border-top: 3px solid #ff8900;
   border-radius: 5px;
 }
+
+.plotly.html-widget.html-widget-static-bound.js-plotly-plot {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.table.table-striped.table-hover tr:hover td{
+  background-color: #ffd2a0;
+}
 /******************************************************************************/
 
 
