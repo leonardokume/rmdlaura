@@ -12,3 +12,5 @@
 inst/doc
 inst/sample_file/*.html
 docs
+examples/Example/Example_cache
+examples/Example/Example_files
