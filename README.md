@@ -3,7 +3,7 @@ Template para gerar relatórios do Robô Laura em Rmarkdown, baseado no template
 
 ## Exemplo
 
-[![](examples/images/rmdlaura.png)]()
+[![](examples/images/rmdlaura.png)](https://github.com/leonardokume/rmdlaura/tree/main/examples/Example)
 
 
 ## Instalação
