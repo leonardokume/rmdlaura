@@ -3,6 +3,12 @@ Template para gerar relatórios do Robô Laura em Rmarkdown, baseado no template
 
 ## Exemplo
 
-
-
 [![](examples/images/rmdlaura.png)]()
+
+
+## Instalação
+
+```r
+install.packages(remotes)  # if necessary
+remotes::install_github("leonardokume/rmdlaura")
+```
