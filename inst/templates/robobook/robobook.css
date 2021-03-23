@@ -44,6 +44,15 @@ legend {
   margin-bottom: 21px;
   border-left: 3px solid green;
   background: rgb(0, 255, 0, 0.1);
+  box-shadow: 5px 5px 5px #eaeaea;
+}
+
+.admonition-orange {
+  padding: 15px;
+  margin-bottom: 21px;
+  border-left: 3px solid #ff8900;
+  background: rgb(255, 137, 0, 0.1);
+  box-shadow: 5px 5px 5px #eaeaea;
 }
 
 .admonition-title {
