@@ -3,7 +3,7 @@ title: ""
 date: "`r format(Sys.time(), '%d de %B, %Y')`"
 author: ""
 output:
-  rmdlaura::robobook:
+  veevabook::robobook:
     highlight: kate
     code_folding: hide
 ---

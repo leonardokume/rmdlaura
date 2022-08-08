@@ -1,11 +1,11 @@
-Package: rmdlaura
+Package: veevabook
 Maintainer: Leonardo Kume <leokume28@gmail.com>
 Authors@R: c(person("Julien", "Barnier", email="julien.barnier@cnrs.fr",
     role=c("cre", "aut")),
     person("Leonardo", "Kume", email="leokume28@gmail.com",
     role=c("aut")))
 Version: 1.0.0
-Date: 2021-03-23
+Date: 2022-08-08
 License: GPL (>= 2)
 Encoding: UTF-8
 Title: Template para gerar relatórios do Robô Laura em Rmarkdown 
@@ -20,6 +20,6 @@ Suggests:
     DT,
     palmerpenguins,
     ggplot2
-URL: https://github.com/leonardokume/rmdlaura
-BugReports: https://github.com/leonardokume/rmdlaura/issues
+URL: https://github.com/leonardokume/veevabook
+BugReports: https://github.com/leonardokume/veevabook/issues
 RoxygenNote: 7.1.1
