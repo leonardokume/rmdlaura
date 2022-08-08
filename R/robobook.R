@@ -78,7 +78,7 @@ html_dependency_robobook <- function(embed_fonts = TRUE) {
   }
   htmltools::htmlDependency(name = "robobook",
                  version = "0.1",
-                 src = system.file("templates/robobook", package = "rmdlaura"),
+                 src = system.file("templates/robobook", package = "veevabook"),
                  script = "robobook.js",
                  stylesheet = stylesheets)
 }

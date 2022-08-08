@@ -1,8 +1,8 @@
 Package: rmdlaura
-Maintainer: Leonardo Kume <leonardo.kume@laura-br.com>
+Maintainer: Leonardo Kume <leokume28@gmail.com>
 Authors@R: c(person("Julien", "Barnier", email="julien.barnier@cnrs.fr",
     role=c("cre", "aut")),
-    person("Leonardo", "Kume", email="leonardo.kume@laura-br.com",
+    person("Leonardo", "Kume", email="leokume28@gmail.com",
     role=c("aut")))
 Version: 1.0.0
 Date: 2021-03-23
